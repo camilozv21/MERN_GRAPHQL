@@ -12,7 +12,12 @@ const app = express();
 // Connect to db
 connectDB()
 
-app.use(cors())
+const corsOptions = {
+    origin: 'http://localhost:3000/*', // Reemplaza con el origen de tu cliente
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, // Habilita las cookies y cabeceras de autorización (si las usas)
+};
+app.use(cors(corsOptions));
 
 app.use('/graphql', graphqlHTTP({
     schema,
