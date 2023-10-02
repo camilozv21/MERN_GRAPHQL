@@ -13,7 +13,7 @@ const app = express();
 connectDB()
 
 const corsOptions = {
-    origin: 'https://mern-graphql-vercel-react.vercel.app/*', // Reemplaza con el origen de tu cliente
+    origin: 'https://mern-graphql-vercel-react.vercel.app', // Reemplaza con el origen de tu cliente
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Habilita las cookies y cabeceras de autorización (si las usas)
 };
